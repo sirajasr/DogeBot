@@ -198,7 +198,8 @@ if (anu.action == 'add' && !mem.includes(client.user.jid)) {
              const mdata = await client.groupMetadata(anu.jid)
              
              const memeg = mdata.participants.length
-             const thu = await client.getStatus(anu.participants[0], MessageType.text)
+     
+        const thu = await client.getStatus(anu.participants[0], MessageType.text)
              const num = anu.participants[0]
              const bosco1 = await client.prepareMessage("0@s.whatsapp.net", hehe, MessageType.location,{ thumbnail: hehe})
 			 const bosco2 = bosco1.message["ephemeralMessage"] ? bosco1.message.ephemeralMessage : bosco1
@@ -405,7 +406,8 @@ if (antical === false) return
 let call;
 calling = JSON.parse(JSON.stringify(json))
 call = calling[1].from
-client.sendMessage(call, `*Sorry ${client.user.name} can't receive calls.*\n*Call = Block!*`, MessageType.text)
+client.sendMessage(call, `*Sorry ${client.user.name}
+ can't receive calls.*\n*Call = Block!*`, MessageType.text)
 .then(() => client.blockUser(call, "add"))
 })
   client.on("CB:Blocklist", (json) => {
